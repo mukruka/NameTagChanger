@@ -140,7 +140,7 @@ public class NameTagChanger {
         Validate.notNull(player, "player cannot be null");
         Validate.notNull(newName, "newName cannot be null");
         Validate.isTrue(!newName.equals(player.getName()), "The new name cannot be the same of the player's! If you intended to reset the player's name, use resetPlayerName()!");
-        Validate.isTrue(newName.length() <= 16, "newName cannot be longer than 16 characters!");
+        //Validate.isTrue(newName.length() <= 16, "newName cannot be longer than 16 characters!");
         GameProfileWrapper profile = new GameProfileWrapper(player.getUniqueId(), newName);
         if (gameProfiles.containsKey(player.getUniqueId())) {
             profile.getProperties().putAll(gameProfiles.get(player.getUniqueId()).getProperties());
